@@ -9,9 +9,9 @@
 
     <Button
         android:id="@+id/buttonForgotUsername"
-        android:layout_width="111dp"
-        android:layout_height="48dp"
-        android:layout_marginEnd="70dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="42dp"
         android:layout_marginBottom="111dp"
         android:backgroundTint="@color/white"
         android:text="@string/button_forgot_username"
@@ -26,9 +26,9 @@
         android:id="@+id/MessagingAppText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="69dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="26dp"
         android:text="@string/messaging_application"
         android:textAlignment="center"
         android:textAllCaps="true"
@@ -37,14 +37,14 @@
         android:textStyle="bold|italic"
         android:typeface="sans"
         app:layout_constraintBottom_toTopOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editText_userName"
-        android:layout_width="204dp"
+        android:layout_width="212dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="38dp"
+        android:layout_marginBottom="11dp"
         android:hint="@string/prompt_username"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,9 +53,8 @@
 
     <EditText
         android:id="@+id/editTextTextPassword"
-        android:layout_width="200dp"
+        android:layout_width="203dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="29dp"
         android:ems="10"
         android:hint="@string/prompt_password"
         android:inputType="textPassword"
@@ -68,18 +67,18 @@
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="39dp"
-        android:layout_marginBottom="48dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toTopOf="@+id/editText_userName"
-        app:layout_constraintEnd_toEndOf="@+id/editText_userName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/MessagingAppText"
         app:srcCompat="@drawable/logo" />
 
     <Button
         android:id="@+id/buttonLogin"
-        android:layout_width="107dp"
+        android:layout_width="108dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="13dp"
+        android:layout_marginBottom="14dp"
         android:backgroundTint="@color/buttonRed"
         android:text="@string/button_login"
         android:textColor="@color/white"
@@ -101,9 +100,9 @@
 
     <Button
         android:id="@+id/buttonForgotPassword"
-        android:layout_width="113dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="73dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="46dp"
         android:layout_marginEnd="48dp"
         android:backgroundTint="@color/white"
         android:text="@string/button_forgot_password"

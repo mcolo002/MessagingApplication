@@ -3,28 +3,25 @@ package com.example.messagingapplication;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class LoginActivity extends AppCompatActivity {
-
+public class PersonalActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_personal);
 
-        initLoginButton();
-        initNewUserButton();
-        initForgotPasswordButton();
-        initForgotUserNameButton();
-
-
+        initNewPersonalMessageButton();
+        initHome();
+        initSearch();
+        initProfile();
     }
 
-    private void initForgotUserNameButton() {
-        Button button = findViewById(R.id.buttonForgotUsername);
+    private void initNewPersonalMessageButton() {
+        Button button = findViewById(R.id.buttonPersonalMessage);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -35,8 +32,19 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    private void initForgotPasswordButton() {
-        Button button = findViewById(R.id.buttonForgotPassword);
+    private void initHome() {
+        ImageButton button = findViewById(R.id.imageButtonHome);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent();
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+            }
+        });
+    }
+    private void initSearch() {
+        ImageButton button = findViewById(R.id.imageButtonSearch);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -47,28 +55,15 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    private void initNewUserButton() {
-        Button button = findViewById(R.id.buttonNewUser);
+    private void initProfile() {
+        ImageButton button = findViewById(R.id.imageButtonProfile);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(LoginActivity.this, NewUserActivity.class);
-                //intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
-            }
-        });
-    }
-
-    private void initLoginButton() {
-        Button button = findViewById(R.id.buttonLogin);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                Intent intent = new Intent();
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
         });
     }
-
 }
